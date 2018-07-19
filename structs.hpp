@@ -54,7 +54,7 @@ namespace BinNamespace
 			struct
 			{
 				int8_t mode1_data[2048];
-				uint32_t crc32; // of mode1_data
+				uint32_t mode1_crc32; // of mode1_data
 				int64_t mode1_reserved; // 00000000 00000000
 				int8_t mode1_error_correction[276];
 			};
