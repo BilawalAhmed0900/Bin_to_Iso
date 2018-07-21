@@ -11,29 +11,36 @@
 #define APP_VERSION_MINOR 0
 #define APP_VERSION_PATCH 0
 
-#define Number_of_arguments 3
+#define NUMBER_OF_ARGUMENTS 3
+
+std::ostream &HELP(std::ostream &stream)
+{
+	using namespace std;
+	stream << APP_NAME << " " 
+		<< "v" << APP_VERSION_MAJOR << "." << APP_VERSION_MINOR << "." << APP_VERSION_PATCH 
+		<< " by " << AUTHOR_NAME << endl;
+	stream << "Usage: " << APP_NAME << " BinFile IsoFile" << endl;
+
+	return stream;
+}
 
 int main(int argc, char const *argv[])
 {
 	using namespace std;
 
-	if (argc != Number_of_arguments)
+	if (argc != NUMBER_OF_ARGUMENTS)
 	{
-		if (argc < Number_of_arguments)
+		if (argc < NUMBER_OF_ARGUMENTS)
 		{
 			cout << "Not enough parameters" << endl;
 		}
-		else if (argc > Number_of_arguments)
+		else if (argc > NUMBER_OF_ARGUMENTS)
 		{
 			cout << "Too many parameters" << endl;
 		}	
         
         cout << endl;
-
-        cout << APP_NAME << " " 
-			<< "v" << APP_VERSION_MAJOR << "." << APP_VERSION_MINOR << "." << APP_VERSION_PATCH 
-			<< " by " << AUTHOR_NAME << endl;
-		cout << "Usage: " << APP_NAME << " BinFile IsoFile" << endl;
+        cout << HELP;
 			
 		return EXIT_FAILURE;
 	}
