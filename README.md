@@ -12,7 +12,7 @@ Sectors are made up in two formats depending upon whether error-correction is us
 
 ## Header
 
-| Name | Size | Possible Value |
+| Name | Size | Value |
 |------|------|-----------------|
 | Sync pattern | 12 bytes | 00 FF FF FF FF FF FF FF FF FF FF 00 |
 | Address | 3 bytes | |
